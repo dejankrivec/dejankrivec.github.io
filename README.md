@@ -1,21 +1,39 @@
-# Dejan Krivec — Portfolio
+# Dejan Krivec — React Portfolio
 
-A responsive, single-page developer portfolio, ready for free hosting on GitHub Pages.
+Personal portfolio built with **React, TypeScript, Vite, CSS, and Motion**. This version adapts the original static HTML/CSS portfolio and adds animated reveals and expandable project contributions. All project visuals are abstract, not screenshots of employer products.
 
-## Preview locally
-Open `index.html` in a browser. No build tools or dependencies are required. The Google Fonts stylesheet requires internet access; system fonts are used as fallback.
+## Local development
 
-## Publish on GitHub Pages
-1. Create a public repository named `YOUR_GITHUB_USERNAME.github.io`.
-2. Upload `index.html`, `styles.css`, and `script.js` to the repository root.
-3. Under **Settings → Pages**, select **Deploy from a branch**, branch **main**, folder **/(root)**, and save.
-4. Your portfolio should appear at `https://YOUR_GITHUB_USERNAME.github.io/` after deployment.
+```bash
+npm install
+npm run dev
+```
 
-## Before sharing with recruiters
-- Review every project description for accuracy and confidentiality.
-- Add approved screenshots or public product links if available.
-- Replace abstract artwork with approved visuals if desired.
-- Consider adding a real, demonstrable UI/animation project for design-engineering applications.
-- Update contact links if needed.
+Open the localhost URL shown by Vite.
 
-No confidential source code is included. Project visuals are abstract illustrations, not screenshots.
+## Build
+
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy to GitHub Pages (free)
+
+1. Create a public GitHub repository named `YOUR_GITHUB_USERNAME.github.io`.
+2. Push the **contents of this folder** to its `main` branch, including `.github/workflows/deploy.yml`.
+3. In the repository go to **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+4. The workflow automatically installs dependencies, builds the site and deploys it on each push to `main`.
+5. Your site will appear at `https://YOUR_GITHUB_USERNAME.github.io`.
+
+If you instead use a project repository named e.g. `portfolio`, change `base: '/'` in `vite.config.ts` to `base: '/portfolio/'` before deploying.
+
+## Customize
+
+- Edit project descriptions in `src/main.tsx` (`projects` array).
+- Edit colors, layout and typography in `src/styles.css`.
+- Replace abstract artwork with screenshots **only if you have permission to publish them**.
+- Verify the email and LinkedIn URL before publishing.
+- This portfolio does not claim public access to private company code.
+
+Accessibility: keyboard-operable project details, semantic sections, visible focus states, and reduced-motion support.
